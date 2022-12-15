@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>My LIFF App</title>
+</head>
+<body>
+    <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
+    <script>
+        async function main() {
+                                         // Liff ID
+            await liff.init({ liffId: "1657742295-YZXzVxZ6" })
+            await liff.shareTargetPicker([
+                {
+                    type: "flex",
+                    // ข้อความก่อนกดอ่าน
+                    altText: "เรามาแจกโค้ดฟรี 50.- กดรับเลย",
+                    contents: 
+                    // โค้ดจาก line bot designer
+                    {
+  "type": "bubble",
+  "hero": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://cdn.discordapp.com/attachments/1052926877800611850/1052928226395168768/24126889fe12735b.png",
+            "size": "full",
+            "aspectRatio": "10.40:15.80"
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "🥇เรามีทุนมาแจก 50.-🥇",
+            "color": "#ffffff",
+            "weight": "bold",
+            "align": "center",
+            "offsetTop": "md"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "button",
+                "action": {
+                  "type": "uri",
+                  "label": "คลิก",
+                  "uri": "https://lin.ee/jnSOQ6g"
+                },
+                "color": "#ffcc00",
+                "margin": "none",
+                "style": "primary"
+              }
+            ],
+            "cornerRadius": "xs",
+            "paddingAll": "xxl",
+            "paddingBottom": "xs"
+          }
+        ]
+      }
+    ],
+    "backgroundColor": "#330033",
+    "paddingAll": "md"
+  }
+}
+                }
+            ])
+            liff.closeWindow()
+        }
+        main()
+    </script>
+</body>
+</html>
